@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Center Form</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        form {
+            display: inline-block;
+        }
+        label, input {
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>HTML Forms</h2>
+
+    <form action="/submit" method="post">
+        <label for="science">Science:</label>
+        <input type="text" id="science" name="science" value="0">
+        
+        <label for="maths">Maths:</label>
+        <input type="text" id="maths" name="maths" value="0">
+        
+        <label for="c">C:</label>
+        <input type="text" id="c" name="c" value="0">
+        
+        <label for="datascience">Data Science:</label>
+        <input type="text" id="datascience" name="datascience" value="0">
+        <br>
+        
+        <input type="submit" value="Submit">
+    </form> 
+
+    <p>If you click the "Submit" button, the form-data will be sent to a page called "/submit".</p>
+</div>
+
+</body>
+</html>
