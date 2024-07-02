@@ -7,7 +7,13 @@ def welcome():
 
 @app.route('/success/<int:score>')
 def success(score):
-    return render_template("result.html",result = score)
+    res = ""
+    if score <= 30:
+        res = "FAIL"
+    else:
+        res = "PASS"
+    exp = {'result': res,'score': score}
+    return render_template("result.html",result = exp)
 
 #Result checker by submit html page and using http verbs like get and post
 @app.route('/submit', methods = ['GET','POST'])
