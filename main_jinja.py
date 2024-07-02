@@ -25,7 +25,8 @@ def submit():
         c = float(request.form['c'])   #it should match with what has been written in index html file under name
         data_science = float(request.form['datascience'])
         total_score = (science+maths+c+data_science)/4
-    return redirect(url_for(success,score = total_score))
+
+    return redirect(url_for('success',score = total_score))
 
 
 
